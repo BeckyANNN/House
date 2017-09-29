@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/base.css" />
+	<link rel="stylesheet" href="../css/footer.css" />
+	<link rel="stylesheet" href="../css/index.css" />
+	<link rel="stylesheet" type="text/css" href="../font/demo.css"/>
+	<link rel="stylesheet" href="../css/product-list.css"/>
+	<link rel="stylesheet" type="text/css" href="../font/iconfont.css"/>
+</head>
+<body>
+	<div class="header"></div>
+	<div class="content">
+		<div class="cont-top">
+			<a href="../index.html">首页</a>
+			<span>&nbsp;&gt;&nbsp;</span>
+			<a href="#">新品</a> 
+		</div>
+		<div class="cont-bottom">
+			<div class="cont-bottomLeft">
+				<p>新品分类</p>
+				<ul>
+					<li class="all"><a href="http://localhost/jiaju/html/product-list.html?ALL AUTUMN">ALL AUTUMN</a></li>
+					<li class="all"><a href="http://localhost/jiaju/html/product-list.html?ALL SERENITY">ALL SERENITY</a></li>
+					<li class="list">
+						<span></span>
+						<a href="http://localhost/jiaju/html/product-list.html?Furniture">家具</a>
+						<ul>
+							<li><a href="#">客厅家具</a></li>
+							<li><a href="#">餐厅家具</a></li>
+							<li><a href="#">门厅/玄关</a></li>
+							<li><a href="#">沙发</a></li>
+							<li><a href="#">卧室家具</a></li>
+							<li><a href="#">书房家具</a></li>
+							<li><a href="#">休闲家具</a></li>
+						</ul>
+					</li>
+					<li class="list">
+						<span></span>
+						<a href="#">灯具/墙饰</a>
+						<ul>
+							<li><a href="#">灯具</a></li>
+							<li><a href="#">墙画/挂钟/墙镜</a></li>
+						</ul>
+					</li>
+					<li class="list">
+						<span></span>
+						<a href="#">窗帘/地毯</a>
+						<ul>
+							<li><a href="#">地毯</a></li>
+						</ul>
+					</li>
+					<li class="list">
+						<span></span>
+						<a href="#">家纺</a>
+						<ul>
+							<li><a href="#">时尚床上用品</a></li>
+							<li><a href="#">装饰性纺织品</a></li>
+							<li><a href="#">儿童纺织品</a></li>
+							<li><a href="#">餐桌纺织品</a></li>
+						</ul>
+					</li>
+					<li class="list">
+						<span></span>
+						<a href="#">装饰品</a>
+						<ul>
+							<li><a href="#">花/花瓶</a></li>
+							<li><a href="#">装饰/摆件</a></li>
+							<li><a href="#">蜡烛/烛台</a></li>
+							<li><a href="#">收纳容器</a></li>
+							<li><a href="#">卫浴/熏香</a></li>
+						</ul>
+					</li>
+					<li class="list">
+						<span></span>
+						<a href="#">儿童</a>
+						<ul>
+							<li><a href="#">儿童家具</a></li>
+							<li><a href="#">儿童灯具</a></li>
+							<li><a href="#">儿童纺织品</a></li>
+							<li><a href="#">儿童饰品</a></li>
+						</ul>
+					</li>
+					<li class="list">
+						<span></span>
+						<a href="#">餐厅用品</a>
+						<ul>
+							<li><a href="#">餐具/刀叉匙</a></li>
+							<li><a href="#">咖啡茶用具</a></li>
+							<li><a href="#">玻璃杯/吧台用具</a></li>
+							<li><a href="#">其他餐厨用品</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="cont-bottomRight">
+				<div class="conbanner"></div>
+				<div class="cont-product">
+
+				</div>
+				<div class="button">
+					<button class="prev">&lt;</button>
+					<button class="next">&gt;</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer"></div>
+</body>
+</html>
+<script src="../js/jquery-1.11.3.js"></script>
+<script src="../js/ajax.js"></script>
+<script>
+$(function(){
+	var p1= new Promise(function(resolve){
+		$(".header").load("../html/header.html");
+		$(".footer").load("../html/footer.html");
+		resolve();
+	});
+	p1.then(function(){			
+		
+	})
+})
+</script>
+<script src="../js/bottomlist.js"></script>
+<script src="../js/product-list.js"></script>

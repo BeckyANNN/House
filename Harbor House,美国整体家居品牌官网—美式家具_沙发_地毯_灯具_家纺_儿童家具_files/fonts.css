@@ -1,0 +1,100 @@
+﻿@font-face {
+                    font-family: 'baskvill';
+                    src: 
+                         url('../fonts/baskvill/baskvill-webfont.woff') format('woff'),
+                         url('../fonts/baskvill/baskvill-webfont.ttf') format('truetype'),
+                         url('../fonts/baskvill/baskvill-webfont.svg#kunstler_scriptregular') format('svg');
+                    font-weight: normal;
+                    font-style: normal;
+
+                }
+@font-face {
+                    font-family: 'Didot';
+                    src: 
+                         url('../fonts/Didot/Didot.woff') format('woff'),
+                         url('../fonts/Didot/Didot.ttf') format('truetype'),
+                         url('../fonts/Didot/Didot.svg#kunstler_scriptregular') format('svg');
+                    font-weight: normal;
+                    font-style: normal;
+
+                }
+@font-face {
+                    font-family: 'didot-htf-b64-bold-ital';
+                    src: 
+                         url('../fonts/didot-htf-b64-bold-ital/didot-htf-b64-bold-ital.woff') format('woff'),
+                         url('../fonts/didot-htf-b64-bold-ital/didot-htf-b64-bold-ital.ttf') format('truetype'),
+                         url('../fonts/didot-htf-b64-bold-ital/didot-htf-b64-bold-ital.svg#kunstler_scriptregular') format('svg');
+                    font-weight: normal;
+                    font-style: normal;
+
+                }
+@font-face {
+                    font-family: 'didot-htf-m96-medium-ital';
+                    src: 
+                         url('../fonts/didot-htf-m96-medium-ital/didot-htf-m96-medium-ital.woff') format('woff'),
+                         url('../fonts/didot-htf-m96-medium-ital/didot-htf-m96-medium-ital.ttf') format('truetype'),
+                         url('../fonts/didot-htf-m96-medium-ital/didot-htf-m96-medium-ital.svg#kunstler_scriptregular') format('svg');
+                    font-weight: normal;
+                    font-style: normal;
+
+                }
+@font-face {
+                    font-family: 'DidotBold';
+                    src: 
+                         url('../fonts/Didot Bold/Didot Bold.woff') format('woff'),
+                         url('../fonts/Didot Bold/Didot Bold.ttf') format('truetype'),
+                         url('../fonts/Didot Bold/Didot Bold.svg#kunstler_scriptregular') format('svg');
+                    font-weight: normal;
+                    font-style: normal;
+
+                }
+@font-face {
+                    font-family: 'DidotItalic';
+                    src: 
+                         url('../fonts/Didot Italic/Didot Italic.woff') format('woff'),
+                         url('../fonts/Didot Italic/Didot Italic.ttf') format('truetype'),
+                         url('../fonts/Didot Italic/Didot Italic.svg#kunstler_scriptregular') format('svg');
+                    font-weight: normal;
+                    font-style: normal;
+
+                }
+@font-face {
+                    font-family: 'gothic';
+                    src: 
+                         url('../fonts/GOTHIC/GOTHIC.woff') format('woff'),
+                         url('../fonts/GOTHIC/GOTHIC.ttf') format('truetype'),
+                         url('../fonts/GOTHIC/GOTHIC.svg#kunstler_scriptregular') format('svg');
+                    font-weight: normal;
+                    font-style: normal;
+
+                }
+@font-face {
+                    font-family: 'GOTHICB';
+                    src: 
+                         url('../fonts/GOTHICB/GOTHICB.woff') format('woff'),
+                         url('../fonts/GOTHICB/GOTHICB.ttf') format('truetype'),
+                         url('../fonts/GOTHICB/GOTHICB.svg#kunstler_scriptregular') format('svg');
+                    font-weight: normal;
+                    font-style: normal;
+
+                }
+@font-face {
+                    font-family: 'GOTHICBI';
+                    src: 
+                         url('../fonts/GOTHICBI/GOTHICBI.woff') format('woff'),
+                         url('../fonts/GOTHICBI/GOTHICBI.ttf') format('truetype'),
+                         url('../fonts/GOTHICBI/GOTHICBI.svg#kunstler_scriptregular') format('svg');
+                    font-weight: normal;
+                    font-style: normal;
+
+                }
+@font-face {
+                    font-family: 'GOTHICI';
+                    src: 
+                         url('../fonts/GOTHICI/GOTHICI.woff') format('woff'),
+                         url('../fonts/GOTHICI/GOTHICI.ttf') format('truetype'),
+                         url('../fonts/GOTHICI/GOTHICI.svg#kunstler_scriptregular') format('svg');
+                    font-weight: normal;
+                    font-style: normal;
+
+                }

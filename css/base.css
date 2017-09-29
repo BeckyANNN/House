@@ -1,0 +1,281 @@
+
+/*重置样式*/
+html, body, div, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; box-sizing: border-box;}
+
+fieldset, img { border:none; }
+
+img{display: block;}
+
+address, caption, cite, code, dfn, th, var { font-style:normal; font-weight:normal; }
+
+ul, ol { list-style:none; } 
+
+body { color:#333; font:12px/20px "SimSun","宋体","Arial Narrow",HELVETICA; background:#fff;/* overflow-y:scroll;*/ overflow-x:hidden;}
+
+a{text-decoration:none;}
+
+html,body{
+	height: 100%;
+}
+/*header*/
+.header{
+	width: 100%;
+	height: 204px;
+	position: relative;
+	
+}
+
+.header .list{
+	width: 100%;
+	background: #f2f2f2;
+	height: 30px;
+	/* soverflow: hidden; */
+}
+.header .list .header-main{
+	width: 1180px;
+	height: 30px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+/* .header .list .header-main>ul{
+	position: absolute;
+} */
+.header .list .header-main>ul:first-of-type{
+	letter-spacing: 5px;
+
+}
+.header .list .header-main>ul:first-of-type li{
+	margin-right: 25px;
+
+}
+/* .header .list .header-main>ul:last-of-type{
+	display: flex;
+	justify-content: space-between;
+} */
+.header .list .header-main>ul li:last-of-type{
+	letter-spacing: 0;
+}
+.header .list .header-main>ul:last-of-type li{
+	margin-left: 25px;
+} 
+.header .list .header-main>ul>li{
+	float: left;
+	line-height: 30px;
+	font-size: 14px;
+	
+
+}
+.header .list .header-main>ul>li i:nth-of-type(1){
+	font-size: 22px !important;
+}
+
+.header .list .header-main>ul li a span{
+	color: #a32b3f;
+	letter-spacing: 0;
+}
+.header .list .header-main>ul li a{
+	color: #606060;
+}
+.header .list .header-main>ul>li:hover>a {
+	color:#000000;
+	text-decoration: none;
+}
+
+.header .list .header-main>ul>li:hover .box{
+	display: block;
+	z-index: 2;
+}
+.header .list .header-main>ul>li:hover .contact{
+	display: block;
+	z-index: 20;
+}
+.header .box{
+	width: 767px;
+	background: white;
+	box-sizing: border-box;
+	position: absolute;
+	overflow: hidden;
+	border: 1px solid #d1d3d4;
+	display: none;
+}
+.header .left{	
+	width: 503px;
+	overflow: hidden;
+	float: left;
+	box-sizing: border-box;
+}
+.header .left ul{
+	padding: 40px 0 40px 59px;
+	float: left;
+	margin-right: 45px;
+}
+.header .left ul li{
+	font-size: 12px;
+}
+.header .left ul li a{
+	letter-spacing: normal;
+}
+.header .left ul li:hover a{
+	color:#000000;
+	text-decoration: none;
+	position: relative;
+}
+.header .right a{
+	display: inline-block;
+	position: absolute;
+	width: 263px;
+	height: 323px;
+	float: right;
+	padding: 50px 22px;
+	/* left: 503px;
+	top: 10px; */
+	border-left: 1px solid #d1d2d3;
+}
+/* .header .right a img{
+	position: absolute;
+	left: 22px;
+	top: 30px;
+} */
+
+/*联系客服*/
+.header .contact{
+	position: absolute;
+	border: 1px solid #d1d3d4;
+	display: none;
+}
+.header .contact ul li{
+	float: left;
+	margin: 5px;
+	font-size: 12px;
+}
+.header .contact ul li:hover a{
+	text-decoration: none;
+	color:#000000;
+}
+/*logo*/
+.header .logo{
+	height: 139px;
+	position: relative;
+	border-bottom: 1px solid #7a7a7a;
+}
+.header .logo img{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	top: 0;
+	
+	margin: auto;
+	
+}
+
+.header .bottomlist{
+	height: 35px;
+}
+.header .bottomlist .list-main{
+	width: 1180px;
+	height: 35px;
+	margin: 0 auto;
+}
+.header .bottomlist .list-main>ul{
+	width: 100%;
+	letter-spacing: 5px;
+	display: flex;
+	justify-content: space-between;
+	line-height: 35px;
+}
+.header .bottomlist .list-main>ul li:last-of-type input{
+	width: 150px;
+	height: 25px;
+	border-radius: 15px;
+	border: 1px solid #b0b0b0;
+	outline: 0;
+	text-indent: 2em;
+}
+.header .bottomlist .list-main>ul li:last-of-type button{
+	position: relative;
+    top: 6px;
+    right: -155px;
+    z-index: 14;
+    width: 20px;
+    height: 20px;
+
+    border: 0;
+    outline: 0;
+	border-radius: 50%;
+	background: #606060 url('../img/search.jpg') no-repeat center center;
+
+	
+}
+.header .bottomlist .list-main>ul li a{
+	color: #606060;
+	font-size: 14px;
+}
+.header .bottomlist .list-main>ul>li:hover>a{
+	text-decoration: none;
+	color: black;
+}
+.header .bottomlist .list-main>ul>li:hover .bottomlist_box{
+	z-index: 2;
+	display: block;
+}
+/* bottomlist二级菜单 */
+ .header .bottomlist ul li .bottomlist_box{
+	background: white;
+	box-sizing: border-box;
+	position: absolute;
+	border: 1px solid #d1d3d4;
+	height: 450px;
+	display: none;
+
+
+
+}
+
+.header .bottomlist .bottomlist_box:first-of-type .bottomlist_left{	
+	height: 450px;
+	float: left;
+	width: 837px;
+}
+.header .bottomlist .bottomlist_box .bottomlist_left ul{
+	padding: 40px 0 0 59px;
+	float: left;
+}
+.header .bottomlist .bottomlist_box .bottomlist_left ul li{
+	font-size: 12px;
+	letter-spacing: 0;
+	line-height: 21px;
+}
+.header .bottomlist .bottomlist_box .bottomlist_left ul li:first-of-type{
+	margin-bottom: 10px;
+}
+.header .bottomlist .bottomlist_box .bottomlist_left ul li:hover a{
+	color:#000000;
+	text-decoration: none;
+	position: relative;
+}
+.header .bottomlist .bottomlist_box .bottomlist_right{
+	float: right;
+	padding: 0 50px;
+}
+.header .bottomlist .bottomlist_box .bottomlist_right p{
+	margin-top: 40px;
+	font-size: 30px;
+}
+.header .bottomlist .bottomlist_box .bottomlist_right a:first-of-type{
+	line-height: 40px;
+}
+.header .bottomlist .bottomlist_box .bottomlist_right a:last-of-type{
+	color: #2075a8;
+}
+.header .bottomlist .bottomlist_box .bottomlist_right a{
+	display: block;
+	text-decoration: none;
+	letter-spacing: 0;
+	line-height: 28px;
+}
+.header .bottomlist .bottomlist_box .bottomlist_right img{
+	
+}
+ 
