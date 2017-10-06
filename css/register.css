@@ -9,34 +9,49 @@
 }
 .register .register_container{
 	min-height: 540px;
-	
 	margin: 18px auto;
     position: relative;
 }
-.register .register_container .register_left{
+.register .register_container .con-main{
+	width: 65%;
+	overflow: hidden;
 	min-height: 540px;
-	width: 380px;
-	position: absolute;
-	left: 300px;
+	float: left;
 }
-.register .register_container .register_left h3{
-	text-align: center;
+.register .register_container .con-main .register_left{
+	min-height: 540px;
+	width: 585px;
+	position: absolute;
+	left: 250px;
+}
+.register .register_container .con-main .register_left h3{
 	padding: 40px 0;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 18px;
 	color: #414042;
+	margin-left: 150px;
 }
-
-.register .register_container .register_left form p{
+.register .register_container .con-main .register_left form{
+	width: 585px;
+	overflow: hidden;
+}
+.register .register_container .con-main .register_left form>span{
+	width: 180px;
+	float: left;
+	color: #a32b3f;
+}
+.register .register_container .con-main .register_left form p{
 	width: 380px;
     padding: 0 12px 0 0;
     line-height: 30px;
     color: #7a7a7a;
     letter-spacing: 10px;
     padding-bottom: 30px; 
+    display: inline-block;
+    float: left;
 }
-.register .register_container .register_left form p input{
+.register .register_container .con-main .register_left form p input{
 	width: 290px;
     height: 28px;
     padding: 0 5px;
@@ -46,45 +61,47 @@
     outline: 0;
     color: #414042;
 }
-.register .register_container .register_left form p:nth-of-type(3){	
+.register .register_container .con-main .register_left form p:nth-of-type(3){	
 	letter-spacing: 0;
 }
-.register .register_container .register_left form p:nth-of-type(4){
+.register .register_container .con-main .register_left form p:nth-of-type(4){
 	letter-spacing: 0;
 	border-bottom: 1px solid #d1d3d4;
 }
-.register .register_container .register_left form p:nth-of-type(4) input{
+.register .register_container .con-main .register_left form p:nth-of-type(4) input{
 	width: 180px;
 }
-.register .register_container .register_left form p:nth-of-type(4) span{
+.register .register_container .con-main .register_left form p:nth-of-type(4) span{
 	width: 50px;
 	height: 28px;
 	display: inline-block;
 	border: 1px solid grey;
 	text-align: center;
 	letter-spacing: 0.5em;
+	float: none;
 }
-.register .register_container .register_left form p:nth-of-type(4) i{
+.register .register_container .con-main .register_left form p:nth-of-type(4) i{
 	font-style: normal;
 	color: #2075a8;
 }
-.register .register_container .register_left form p:nth-of-type(5){
+.register .register_container .con-main .register_left form p:nth-of-type(5){
 	width: 100%;
 	letter-spacing: 0;
 }
-.register .register_container .register_left form p:nth-of-type(5) input{
+.register .register_container .con-main .register_left form p:nth-of-type(5) input{
 	width: 13px;
 	height: 13px;
 	display: inline-block;
 	margin-right: 10px;
 	margin-top: 10px;
+	float: left;
 }
-.register .register_container .register_left form p:nth-of-type(5) span{
+.register .register_container .con-main .register_left form p:nth-of-type(5) span{
 	color: #7a7a7a;
 	display: inline-block;
-	margin-top: 10px;
+	float: left;
 }
-.register .register_container .register_left form p:nth-of-type(5) a{
+.register .register_container .con-main .register_left form p:nth-of-type(5) a{
 	text-decoration: none;
 	color: #2075a8;
 	float: right;
@@ -92,24 +109,22 @@
 	line-height: 30px;
 	font-size: 12px;
 }
-.register .register_container .register_left form p:last-of-type{
+.register .register_container .con-main .register_left form p:last-of-type{
 	margin: 50px auto;
 	text-align: center;
-	
 }
-.register .register_container .register_left form p:last-of-type input{
+.register .register_container .con-main .register_left form p:last-of-type input{
 	background: #414042;
+	color: #fff;
 	width: 220px;
 	height: 40px;
-	color: white;
 }
 .register .register_container .register_right{
 	min-height: 540px;
 	width: 380px;
 	border-left:1px dashed #d1d3d4;
-	position: absolute;
-	top: 0;
-	left: 800px;
+	float: left;
+	
 }
 .register .register_container .register_right h3{
 	text-align: center;
@@ -122,14 +137,18 @@
 .register .register_container .register_right p{
 	width: 100%;
 }
-.register .register_container .register_right p input{
+.register .register_container .register_right p a{
 	background: #414042;
 	width: 220px;
 	height: 40px;
+	display: block;
 	color: white;
 	margin-left: 80px;
 	outline: none;
 	border: 0;
+	text-align: center;
+	line-height: 40px;
+	font-size: 14px;
 }
 .bottom{
 	width: 100%;

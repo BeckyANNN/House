@@ -74,10 +74,17 @@
 <script src="http://localhost/jiaju/js/bottomlist.js"></script>
 <script src="http://localhost/jiaju/js/ajax.js"></script>
 <script src="js/jquery-1.11.3.js"></script>
+<script src="js/cookie.js"></script>
 <script>
 	$(function(){
 	$(".header").load("html/header.html");
 	$(".footer").load("html/footer.html");
-
+	//欢迎
+	var user = getCookie("user");
+	if(user){
+		$(".hello").innerHTML = "欢迎您："+ user;
+	}else{
+		$(".hello").innerHTML = "您好，欢迎来到 HARBOR HOUSE！";
+	}
 })
 </script>

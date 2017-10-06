@@ -12,6 +12,7 @@
 	<body>
 		<div class="header">
 			<div class="list">
+			<div class="header-main">
 				<ul>
 					<li>
 						<a href="#">新品<span>NEW</span></a>
@@ -19,10 +20,9 @@
 							<div class="left">						
 								<ul>
 									<li>新品分类</li>
-									<li><a href="#">ALL AUTUMN</a></li>
-									<li><a href="#">TREASURES</a></li>
-									<li><a href="#">ALL SERENITY</a></li>
-									<li><a href="#">家具</a></li>
+									<li><a href="http://localhost/jiaju/html/product-list.html?ALL AUTUMN">ALL AUTUMN</a></li>
+									<li><a href="http://localhost/jiaju/html/product-list.html?ALL SERENITY">ALL SERENITY</a></li>
+									<li><a href="http://localhost/jiaju/html/product-list.html?Furniture">家具</a></li>
 									<li><a href="#">灯具&墙饰</a></li>
 									<li><a href="#">窗帘&地毯</a></li>
 									<li><a href="#">家纺</a></li>
@@ -36,7 +36,7 @@
 							
 							</div>
 							<div class="right">
-									<a href="#"><img src="../img/list1.jpg"/></a>
+									<a href="#"><img src="http://localhost/jiaju/img/list1.jpg"/></a>
 							</div>
 						</div>
 					</li>
@@ -64,7 +64,7 @@
 							
 							</div>
 							<div class="right">
-									<a href="#"><img src="../img/list2.jpg"/></a>
+									<a href="#"><img src="http://localhost/jiaju/img/list2.jpg"/></a>
 							</div>
 						</div>
 					</li>
@@ -93,7 +93,7 @@
 							
 							</div>
 							<div class="right">
-									<a href="#"><img src="../img/list3.jpg"/></a>
+									<a href="#"><img src="http://localhost/jiaju/img/list3.jpg"/></a>
 							</div>
 						</div>
 					</li>
@@ -101,7 +101,7 @@
 				</ul>
 				<ul>
 					<li><a href="#">您好，欢迎来到 HOME！</a></li>
-					<li><a href="#">登录/注册</a></li>
+					<li><a href="register.html">登录/注册</a></li>
 					<li>
 						<i class="iconfont icon-lianxi"></i>
 						<a href="#">联系客服</a>
@@ -125,9 +125,9 @@
 				</ul>
 			</div>
 			<div class="logo">
-				<img src="../img/logo.jpg" alt="" />
+				<img src="http://localhost/jiaju/img/logo.jpg" alt="" />
 			</div>
-
+			</div>
 		</div>
 		<!-- login -->
 		<div class="login">
@@ -135,8 +135,8 @@
 				<div class="login_left">
 					<h3>会员登录</h3>
 					<form action="">
-						<p>账号&nbsp;<input type="text" name="username" id="username" placeholder="请输入邮箱/用户名/手机号/门店会员卡号"></p>
-						<p>密码&nbsp;<input type="password" name="password" id="password" placeholder="请输入登录密码"></p>
+						<p>账号&nbsp;<input type="text" name="username" class="username" placeholder="请输入邮箱/用户名/手机号/门店会员卡号"></p>
+						<p>密码&nbsp;<input type="password" name="password" class="password" placeholder="请输入登录密码"></p>
 						<p><input type="checkbox"><span>七天内自动登录</span>
 						<a href="#">忘记密码</a>
 						</p>
@@ -166,3 +166,4 @@
 		</div>
 </body>
 </html>
+<script src="../js/login.js"></script>

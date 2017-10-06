@@ -23,10 +23,12 @@ body,html{
 	margin-top: 50px;
 	z-index: 2;
 	overflow: hidden;
+	display: none;
 }
 .content .con-top .largeImg img{
 	width: 1200px;
 	height: 1200px;
+	position: absolute;
 }
 .content .con-top .con-img{
 	position: relative;
@@ -42,11 +44,12 @@ body,html{
 .content .con-top .con-img .filt{
 	width: 200px;
 	height: 200px;
-	background: white;
+	background: orange;
 	opacity: 0.4;
 	position: absolute;
 	top: 0;
 	left: 0;
+	display: none;
 }
 .content .con-top .detail{
     float: right;
@@ -232,6 +235,7 @@ body,html{
 	padding: 30px 15px 0;
     line-height: 30px;
     color: #4c4c4c;
+    display: none;
 }
 .content .middle .shouhou p{
 	line-height: 30px;

@@ -29,7 +29,6 @@ html,body{
 	width: 100%;
 	background: #f2f2f2;
 	height: 30px;
-	/* soverflow: hidden; */
 }
 .header .list .header-main{
 	width: 1180px;
@@ -39,7 +38,6 @@ html,body{
 	justify-content: space-between;
 }
 /* .header .list .header-main>ul{
-	position: absolute;
 } */
 .header .list .header-main>ul:first-of-type{
 	letter-spacing: 5px;

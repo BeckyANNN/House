@@ -7,27 +7,27 @@
 	<link rel="stylesheet" href="../css/footer.css" />
 	<link rel="stylesheet" type="text/css" href="../font/demo.css"/>
 	<link rel="stylesheet" type="text/css" href="../font/iconfont.css"/>
-	<link rel="stylesheet" href="../css/product-detail.css">
+	<link rel="stylesheet" href="../css/cart.css">
 </head>
 <body>
-	<div class="header">
-		
-	</div>
+	<div class="header"></div>
 	<div class="content">
-		<div class="con-top"></div>
-		<div class="middle"></div>
-		<div class="con-bottom">
-			<ul class="list">
-				<li>同系列产品</li>
-			</ul>
-			<div class="pro"></div>
-		</div>
+		<ul>
+			<li class="activeCart">我的购物车</li>
+			<li>确定订单信息</li>
+			<li>选择支付方式</li>
+			<li>完成</li>
+		</ul>
+		<p>温馨提示:购物车中的商品无法保留库存，请您及时结算，商品库存以订单结算为准！</p>
+		<div class="box"></div>
 	</div>
 	<div class="footer"></div>
 </body>
 </html>
-<script src="../js/jquery-1.11.3.js"></script>
+<script src="../js/cookie.js"></script>
+<script src="../js/bottomlist.js"></script>
 <script src="../js/ajax.js"></script>
+<script src="../js/jquery-1.11.3.js"></script>
 <script>
 $(function(){
 	var p1= new Promise(function(resolve){
@@ -40,5 +40,3 @@ $(function(){
 	})
 })
 </script>
-<script src="../js/bottomlist.js"></script>
-<script src="../js/product-detail.js"></script>

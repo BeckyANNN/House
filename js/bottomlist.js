@@ -2,6 +2,7 @@ window.onload = function(){
 	//家具
 	var bottomBox = document.querySelectorAll(".bottomlist_box");
 	var url = "http://localhost/jiaju/json/jiaju.json";
+	var oHello = document.querySelector(".hello>a");
 	ajax("get",url,function(data){
 		var data = JSON.parse(data);
 		var bottomLeft = document.querySelectorAll(".bottomlist_left");
@@ -270,7 +271,7 @@ window.onload = function(){
 		}
 		oUl_4[3].innerHTML = str;
 		oUl_4[3].style.position = "absolute";
-		oUl_4[3].style.left ="180px";
+		oUl_4[3].style.left ="280px";
 		oUl_4[3].style.top ="94px";
 
 		str = "";
@@ -306,7 +307,7 @@ window.onload = function(){
 
 		//餐厨用品
 		bottomLeft[5].parentNode.style.position = "absolute";
-		bottomLeft[5].parentNode.style.left = "385px";
+		bottomLeft[5].parentNode.style.left = "585px";
 		bottomLeft[5].style.width = "480px";
 		var oUl_5 = bottomLeft[5].children;
 		str = "";
@@ -341,7 +342,7 @@ window.onload = function(){
 
 		//儿童
 		bottomLeft[6].parentNode.style.position = "absolute";
-		bottomLeft[6].parentNode.style.left = "210px";
+		bottomLeft[6].parentNode.style.left = "610px";
 		bottomLeft[6].style.width = "650px";
 		var oUl_6 = bottomLeft[6].children;
 		str = "";
@@ -379,5 +380,5 @@ window.onload = function(){
 		}
 		oUl_6[4].innerHTML = str;
 
-	});
+	});	
 }

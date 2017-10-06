@@ -12,6 +12,7 @@
 	<body>
 		<div class="header">
 			<div class="list">
+			<div class="header-main">
 				<ul>
 					<li>
 						<a href="#">新品<span>NEW</span></a>
@@ -19,10 +20,9 @@
 							<div class="left">						
 								<ul>
 									<li>新品分类</li>
-									<li><a href="#">ALL AUTUMN</a></li>
-									<li><a href="#">TREASURES</a></li>
-									<li><a href="#">ALL SERENITY</a></li>
-									<li><a href="#">家具</a></li>
+									<li><a href="http://localhost/jiaju/html/product-list.html?ALL AUTUMN">ALL AUTUMN</a></li>
+									<li><a href="http://localhost/jiaju/html/product-list.html?ALL SERENITY">ALL SERENITY</a></li>
+									<li><a href="http://localhost/jiaju/html/product-list.html?Furniture">家具</a></li>
 									<li><a href="#">灯具&墙饰</a></li>
 									<li><a href="#">窗帘&地毯</a></li>
 									<li><a href="#">家纺</a></li>
@@ -36,7 +36,7 @@
 							
 							</div>
 							<div class="right">
-									<a href="#"><img src="../img/list1.jpg"/></a>
+									<a href="#"><img src="http://localhost/jiaju/img/list1.jpg"/></a>
 							</div>
 						</div>
 					</li>
@@ -64,7 +64,7 @@
 							
 							</div>
 							<div class="right">
-									<a href="#"><img src="../img/list2.jpg"/></a>
+									<a href="#"><img src="http://localhost/jiaju/img/list2.jpg"/></a>
 							</div>
 						</div>
 					</li>
@@ -93,15 +93,15 @@
 							
 							</div>
 							<div class="right">
-									<a href="#"><img src="../img/list3.jpg"/></a>
+									<a href="#"><img src="http://localhost/jiaju/img/list3.jpg"/></a>
 							</div>
 						</div>
 					</li>
 					<li><a href="#">THE AMERICAN TASTE</a></li>
 				</ul>
 				<ul>
-					<li><a href="#">您好，欢迎来到 HOME！</a></li>
-					<li><a href="#">登录/注册</a></li>
+					<li class="hello"><a href="#">您好，欢迎来到 HOME！</a></li>
+					<li><a href="register.html">登录/注册</a></li>
 					<li>
 						<i class="iconfont icon-lianxi"></i>
 						<a href="#">联系客服</a>
@@ -125,32 +125,33 @@
 				</ul>
 			</div>
 			<div class="logo">
-				<img src="../img/logo.jpg" alt="" />
+				<img src="http://localhost/jiaju/img/logo.jpg" alt="" />
 			</div>
-
+			</div>
 		</div>
-		<!-- login -->
+		<!-- register -->
 		<div class="register">
 			<div class="register_container">
-				<div class="register_left">
+				<div class="con-main">
+					<div class="register_left">
 					<h3>新会员注册</h3>
-					<form action="">
-						<p>账号&nbsp;<input type="text" name="username" id="username" placeholder="请输入邮箱/用户名/手机号/门店会员卡号"></p>
-						<p>密码&nbsp;<input type="password" name="password" id="password" placeholder="请输入登录密码"></p>
-						<p>确认密码&nbsp;&nbsp;  <input type="password" name="password" id="password" placeholder="确认密码"></p>
-						<p>验证码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="identify" id="password" placeholder="请输入验证码">
-							<span>7v8F</span>
+					<form action="../index.html" class="form">
+						<p>账号&nbsp;<input type="text" name="username" class="username" placeholder="请输入邮箱/用户名/手机号/门店会员卡号"></p><span></span>
+						<p>密码&nbsp;<input type="password" name="password" class="password" placeholder="请输入登录密码"></p><span></span>
+						<p>确认密码&nbsp;&nbsp;  <input type="password" name="confirm" class="confirm" placeholder="确认密码"></p><span></span>
+						<p>验证码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="identify" class="identify" placeholder="请输入验证码">
+							<span>7v8f</span>
 							<i>[换一张]</i>
+						</p><span></span>
+						<p><input type="checkbox" checked class="check"><span>同意<a href="#">注册条款</a></span>
 						</p>
-						<p><input type="checkbox"><span>同意<a href="#">注册条款</a></span>
-						
-						</p>
-						<p><input type="button" value="注册 " id="btn"></p>
+						<p><input type="submit" value="注册 " id="btn"></p>
 					</form>
+				</div>
 				</div>
 				<div class="register_right">
 					<h3>我已经是HOUSE会员</h3>
-					<p><input type="button" value="登&nbsp;录" id="btn"></p>
+					<p><a href="login.html">登录</a></p>
 				</div>
 			</div>
 		</div>
@@ -171,3 +172,5 @@
 		</div>
 </body>
 </html>
+<script src="../js/register.js"></script>
+<script src="../js/cookie.js"></script>
