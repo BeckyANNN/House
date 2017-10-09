@@ -17,6 +17,14 @@
 					<li></li>
 					<li></li>
 				</ul>
+				<div class="circle">
+					<span class="active"></span>
+					<span></span>
+				</div>
+				<div class="arrow">
+					<a href="javascript:void(0);" class="pre"></a>
+					<a href="javascript:void(0);" class="next"></a>
+				</div>
 			</div>
 			<div class="con01">
 				<a href="#"><img src="img/pic1.jpg" alt=""></a>
@@ -75,16 +83,75 @@
 <script src="http://localhost/jiaju/js/ajax.js"></script>
 <script src="js/jquery-1.11.3.js"></script>
 <script src="js/cookie.js"></script>
+<script src="js/tools.js"></script>
 <script>
 	$(function(){
 	$(".header").load("html/header.html");
 	$(".footer").load("html/footer.html");
-	//欢迎
-	var user = getCookie("user");
-	if(user){
-		$(".hello").innerHTML = "欢迎您："+ user;
-	}else{
-		$(".hello").innerHTML = "您好，欢迎来到 HARBOR HOUSE！";
+	//轮播图
+	oUl = $(".homebanner>ul");
+	var now = 0;
+	var next = 0;
+	var oLi = $(".homebanner>ul>li");
+	var aCircle = $(".homebanner>div>span");
+	var timer = "";
+	//自动轮播
+	autoPlay();
+
+	function autoPlay(){
+		timer = setInterval(function(){
+			if(next==oLi.length-1){
+				next = 0;
+			}else{
+				next++;
+			}
+			tab();
+		},3000);
 	}
+
+	//tab()函数
+	function tab(){
+		move(oLi[now],{'opacity':0});
+		move(oLi[next],{'opacity':100});
+		for(var j=0; j<aCircle.length; j++){
+			aCircle[j].className="";			
+		}
+		aCircle[next].className="active";
+		now = next;
+	}
+
+	//左右箭头
+	var pre_arrow = document.querySelector(".pre");
+	var next_arrow = document.querySelector(".next");
+	pre_arrow.onclick = function(){
+		if(next==0){
+			next = oLi.length-1;
+		}else{
+			next--;
+		}
+		tab();
+	}
+	next_arrow.onclick = function(){
+		if(next==oLi.length-1){
+			next = 0;
+		}else{
+			next++;
+		}
+		tab();
+	}
+
+	//小圆圈
+	for(var i=0;i<aCircle.length; i++){
+		aCircle[i].index = i;
+		aCircle[i].onmouseover = function(){
+			for(var j=0; j<aCircle.length; j++){
+				aCircle[j].className = "";
+			}
+			next = this.index;
+			aCircle[next].className = "active";
+			tab();
+		}
+	}
+	
 })
 </script>

@@ -307,7 +307,7 @@ window.onload = function(){
 
 		//餐厨用品
 		bottomLeft[5].parentNode.style.position = "absolute";
-		bottomLeft[5].parentNode.style.left = "585px";
+		bottomLeft[5].parentNode.style.left = "430px";
 		bottomLeft[5].style.width = "480px";
 		var oUl_5 = bottomLeft[5].children;
 		str = "";
@@ -342,7 +342,7 @@ window.onload = function(){
 
 		//儿童
 		bottomLeft[6].parentNode.style.position = "absolute";
-		bottomLeft[6].parentNode.style.left = "610px";
+		bottomLeft[6].parentNode.style.left = "270px";
 		bottomLeft[6].style.width = "650px";
 		var oUl_6 = bottomLeft[6].children;
 		str = "";
@@ -380,5 +380,26 @@ window.onload = function(){
 		}
 		oUl_6[4].innerHTML = str;
 
+
+		//购物车数量
+		var cartNum = document.querySelector(".cart_num");
+		var count = 0;
+		if(getCookie("init")==undefined){
+			var obj = {};
+		}else{
+			var obj = JSON.parse(getCookie("init")); 
+		}
+		for(var key in obj){
+			count += Number(obj[key]);
+		}
+		cartNum.innerHTML = count;
+
+		//欢迎
+		var string = getCookie("user");
+		if(string==undefined){
+			oHello.innerHTML = "您好，欢迎来到HOME!";
+		}else{
+			oHello.innerHTML = "您好,"+string;
+		}
 	});	
 }

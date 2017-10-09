@@ -37,7 +37,7 @@ var p1 = new Promise(function(resolve){
 					<p>颜色：<a href="#"><img src=${data[i].src1[0]}></a></p>
 					<p>规格：<a href="javascript:void(0);">${data[i].specifications[0]}</a></p>
 					<p>数量：					
-						<input type="text" value="1" class="num">
+						<input type="text" value="1" class="num_now num">
 						<button class="inc"></button>
 						<button class="dec"></button>					
 						<span>件</span>
@@ -117,7 +117,7 @@ var p1 = new Promise(function(resolve){
 								<button class="dec"></button>		
 								<span>件</span>
 							</p>
-							<a href="javascript:void(0)" class="addCart">加入购物车</a>
+							<a href="javascript:void(0)" class="add"  num-id="${data[i].id}">加入购物车</a>
 						</li>
 					</ul>`;
 					pro.innerHTML = str;
@@ -187,8 +187,8 @@ setTimeout(function(){
 		//购物数量加减
 		var oDec = document.querySelectorAll(".dec");
 		var oInc = document.querySelectorAll(".inc");
+		var oNumNow = document.querySelector(".num_now");
 		var oNum = document.querySelectorAll(".num");
-
 		for(var i=0; i<oInc.length; i++){
 			
 			oDec[i].index = i;
@@ -208,6 +208,66 @@ setTimeout(function(){
 				oNum[this.index].value= val;
 				
 			};
+		}
+		//加入购物车
+		var addCart = document.querySelector(".addCart");
+		var sumNow = Number(oNumNow.value);
+		addCart.onclick = function(){
+			var numId = arr[1];	
+			if(getCookie("init")==undefined){
+				var obj = {};
+			}else{
+				var obj = JSON.parse(getCookie("init")); 
+			}
+			
+			if(obj[numId]==undefined){
+				obj[numId] = sumNow;
+			}else{
+				var sum1 = obj[numId];
+				sum1 += Number(oNumNow.value);
+				obj[numId] = sum1;
+			}
+			setCookie("init",JSON.stringify(obj),7);
+
+			//购物车数量_顶部
+			var cartNum = document.querySelector(".cart_num");
+			var count = 0;
+			for(var key in obj){
+				count+=Number(obj[key]);
+			}
+			cartNum.innerHTML = count;
+		}
+		
+		//同系列加入购物车
+		var oPro = document.querySelector(".pro");
+		oPro.onclick = function(e){
+			var e = e||event;
+			var target = e.target||e.srcElement;			
+			if(target.className="add"&&target.tagName=="A"){
+				var numId = target.getAttribute("num-id");
+				var sum = Number(target.previousElementSibling.firstElementChild.value);
+				if(getCookie("init")==undefined){
+					var obj = {};
+				}else{
+					var obj = JSON.parse(getCookie("init")); 
+				}
+				if(obj[numId]==undefined){
+					obj[numId] = sum;
+				}else{
+					var sum1 = obj[numId];
+					sum1 += Number(target.previousElementSibling.firstElementChild.value);
+					obj[numId] = sum1;
+				}
+				setCookie("init",JSON.stringify(obj),7);
+
+				//购物车数量_顶部
+				var cartNum = document.querySelector(".cart_num");
+				var count = 0;
+				for(var key in obj){
+					count+=Number(obj[key]);
+				}
+				cartNum.innerHTML = count;
+			}
 		}
 },500)
 

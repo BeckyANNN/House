@@ -1,5 +1,3 @@
-
-
 window.onload = function(){
 	var user = document.querySelector(".username");
 	var pwd = document.querySelector(".password");
@@ -27,8 +25,19 @@ window.onload = function(){
 	    	oSpan[0].innerHTML = "账号只能由中文、英文、数字及“_”、“-”组成";
 	    }
 
-	}
+	    //判断用户名是否可用
 
+	  $.get("http://localhost/jiaju/php/check.php",{"username":$(this).val()},function(data){
+			console.log(1);
+			if(data.status == 0){
+				oSpan[0].innerHTML = "用户名已存在，请重新选择";
+				return false;
+			}
+		},"json");
+
+	}
+ 
+ 
 	//验证密码
 	pwd.onblur = function(){
 	    var reglen = /^[a-zA-Z0-9\.]{6,20}$/;
@@ -86,9 +95,26 @@ window.onload = function(){
 			alert("请验证信息");
 			return false;
 		}
-		setCookie("user",user.value,7);
+
 		
+		
+		//注册
+		//待注册用户的对象信息
+		var userInfo = {
+			username:user.value,
+			password:pwd.value
+		}
+		//异步post请求
+		$.post("/jiaju/php/register.php",userInfo,function(data){
+			if(data.status==1){
+				location = "login.html";
+			}else{
+				alert("注册失败，请重新填写并提交");
+			}
+		},"json");
 	}
 
 
+	
+	
 }

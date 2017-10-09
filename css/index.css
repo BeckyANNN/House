@@ -8,25 +8,77 @@ a{
 ul li{
 	list-style: none;
 }
+body,html{
+	    font-family: 'Segoe UI',MicrosoftYaHei,"微软雅黑",SimSun,"宋体",sans-serif;
+}
 .content{
 	width: 100%;
 }
 .content .homebanner{
 	width: 100%;
 	height: 600px;
+	position: relative;
 }
 .content .homebanner ul{
 	position: relative;
+	overflow: hidden;
 }
 .content .homebanner ul li:nth-of-type(1){
+	width: 100%;
 	height: 600px;
-	float: left;
+	/* float: left; */
+	position: absolute;
+	top: 0;
+	left: 0;
 	background: url(../img/index01.jpg) no-repeat center center;
 }
 .content .homebanner ul li:nth-of-type(2){
+	width: 100%;
 	height: 600px;
 	z-index: 2;
 	background: url(../img/index02.jpg) no-repeat center center;
+}
+.content .homebanner .circle{
+	position: absolute;
+	left: 50%;
+	bottom: 50px;
+}
+.content .homebanner .circle span{
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	background: white;
+	border-radius: 50%;
+	margin: 0 10px;
+	z-index: 3;
+}
+.content .homebanner .circle .active{
+	background: grey;
+}
+.content .homebanner .arrow{
+	width: 88%;
+	height: 45%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	/* display: none; */
+}
+.content .homebanner .arrow a{
+	display: block;
+	width: 42px;
+	height: 113px;
+	background: url(../img/arrowhead.png) no-repeat;
+}
+.content .homebanner .arrow a:first-of-type{	
+	background-position: 0 -60px;
+}
+.content .homebanner .arrow a:last-of-type{	
+	background-position: -42px -60px;
 }
 .content .con01 a{
 	display: block;

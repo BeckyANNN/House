@@ -1,6 +1,9 @@
 body,html{
 	    font-family: 'Segoe UI',MicrosoftYaHei,"微软雅黑",SimSun,"宋体",sans-serif;
 }
+a,a:hover{
+	text-decoration: none;
+}
 .content{
 	width: 1180px;
 	margin: 0 auto;
@@ -172,10 +175,10 @@ body,html{
 .content .con-top .detail>a:nth-of-type(2){
 	left: 160px;
 }
-.content .con-top .detail>a:hover{
+.content .con-top .detail>a:nth-of-type(1){
 	background: #414042;
     color: #e0d6c6;
-    text-decoration: none;
+
 }
 .content .middle{
 	margin: 50px 0;

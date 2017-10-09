@@ -1,3 +1,9 @@
+body,html{
+	    font-family: 'Segoe UI',MicrosoftYaHei,"微软雅黑",SimSun,"宋体",sans-serif;
+}
+a,a:hover{
+	text-decoration: none;
+}
 .header{
 	height: 168px;	
 }
@@ -103,7 +109,8 @@
 .login .login_container .login_right p{
 	width: 100%;
 }
-.login .login_container .login_right p input{
+.login .login_container .login_right p a{
+	display: block;
 	background: #414042;
 	width: 220px;
 	height: 40px;
@@ -111,6 +118,8 @@
 	margin-left: 80px;
 	outline: none;
 	border: 0;
+	text-align: center;
+	line-height: 40px;
 }
 .bottom{
 	width: 100%;
