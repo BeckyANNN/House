@@ -236,7 +236,43 @@ setTimeout(function(){
 				count+=Number(obj[key]);
 			}
 			cartNum.innerHTML = count;
+
+			//弹出信息框
+			alertInfo(obj,count);
+			
 		}
+		//弹出信息框
+		function alertInfo(obj,count){
+				$.get("/jiaju/json/serenity.json",obj,function(data){
+					length = data.length;
+					if(obj==undefined){
+						$(".cart_top").delay(1000).fadeIn(400).delay(5000).fadeOut(400);
+						$(".cartShow").hide();
+						$(".cartEmpty").show();
+					}else{
+						var sum = 0;
+						for(var i=0; i<length; i++){
+							for(var key in obj){
+								if(data[i].id==key){
+									var aPrice = "";
+									aPrice = data[i].nowPrice.split("￥")[1];
+									sum+=count*Number(aPrice);
+								}
+								
+							}
+							
+						}
+						console.log(sum)
+						$(".cart_top").delay(1000).fadeIn(400).delay(5000).fadeOut(400);
+						$(".cartShow").show();
+						$(".cartEmpty").hide();
+						$(".pcount").text(count);
+						$(".ptotal").text(sum);
+						setCookie("total",sum,7);
+					}
+					
+				})
+			}
 		
 		//同系列加入购物车
 		var oPro = document.querySelector(".pro");
@@ -267,7 +303,9 @@ setTimeout(function(){
 					count+=Number(obj[key]);
 				}
 				cartNum.innerHTML = count;
+				alertInfo(obj,count);
 			}
+
 		}
 },500)
 

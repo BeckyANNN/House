@@ -206,3 +206,29 @@ a,a:hover{
 	background: #58595b;
     color: #e0d6c6;
 }
+.content .show .empty{
+	width: 300px;
+	padding: 160px 0 200px;
+	position: relative;
+	margin: auto;
+    font-size: 18px;
+    color: #414042;
+}
+.content .show .empty p{
+    padding: 5px 0;
+    text-align: center;
+    line-height: 25px;
+}
+.content .show .empty p a{
+    height: 37px;
+    line-height: 37px;
+    border-left: 1px outset #58595b;
+    border-right: 1px outset #58595b;
+    padding: 8px 25px;
+    background: #414042;
+    border: none;
+    border-bottom: 2px outset #231F20;
+    border-top: 1px outset #BCBEC0;
+    color: #e0d6c6;
+    font-size: 14px;
+}

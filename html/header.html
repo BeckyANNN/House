@@ -89,7 +89,19 @@
 				</ul>
 				<ul>
 					<li class="hello"><a href="#">您好，欢迎来到 HOME！</a></li>
-					<li><a href="/jiaju/html/register.html">登录/注册</a></li>
+					<li class="caozuo">
+						<a href="/jiaju/html/login.html">登录</a>
+						<a href="/jiaju/html/register.html">/注册</a>
+					</li>
+					<li class="person">个人中心
+						<ul>
+							<li><a href="#">我的订单(<span>0</span>)</a></li>
+							<li><a href="#">优惠券(<span>0</span>)</a></li>
+							<li><a href="##">我的收藏</a></li>
+							<li><a href="#">会员等级</a></li>
+							<li class="exit"><a href="#">退出登录</a></li>
+						</ul>
+					</li>
 					<li>
 						<i class="iconfont icon-lianxi"></i>
 						<a href="#">联系客服</a>
@@ -109,11 +121,25 @@
 					<li>
 						<i class="iconfont icon-gouwuchekong"></i>
 						<a href="/jiaju/html/cart.html">购物车(<span class="cart_num">0</span>)</a>
+						<div class="cart_top">
+							<div class="cartEmpty">
+								<p>您的购物车中暂无商品,</p>
+								<p>快去挑选自己钟爱的商品吧！</p>
+							</div>
+							<div class="cartShow">
+								<p class="caption">您的购物车中:</p>
+								<p>商品总计
+									<span class="pcount">0</span>件,金额总计:<strong class="ptotal">￥1111</strong></p>
+								<p class="cart_btn">
+									<a href="/jiaju/html/cart.html" class="btn" style="color:white;">结算</a>
+								</p>
+							</div>
+						</div>
 					</li>
 				</ul>
 			</div>
 			<div class="logo">
-				<img src="http://localhost/jiaju/img/logo.jpg" alt="" />
+				<a href="/jiaju/index.html"><img src="http://localhost/jiaju/img/logo.png" /></a>
 			</div>
 			<div class="bottomlist">
 				<div class="list-main">

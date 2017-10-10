@@ -27,7 +27,7 @@
 	var oA = document.querySelectorAll(".all>a");
 	for(var i=0; i<oAll.length; i++){
 		oAll[i].index = i;
-		oAll[i].onmouseover = function(){
+		oAll[i].onclick = function(){
 			for(var j=0; j<oAll.length; j++){
 				oAll[j].style.background = "#fff";
 				oA[j].style.color = "#808285";
@@ -35,12 +35,6 @@
 				oA[this.index].style.color = "#fff";
 			}
 
-		}
-		oAll[i].onmouseout = function(){
-			for(var j=0; j<oAll.length; j++){
-				oAll[j].style.background = "#fff";
-				oA[j].style.color = "#808285";
-			}
 		}
 	}
 	//获取产品信息

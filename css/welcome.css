@@ -1,0 +1,115 @@
+.content{
+	width: 1180px;
+	margin: 0 auto;
+}
+.content .signIn{
+	position: relative;
+    margin: 0 auto 30px;
+    border: 1px solid #bcbec0;
+    border-top: 3px solid #414042;
+}
+.content .signIn .reg_success{
+	min-height: 170px;
+    padding: 50px 0;
+	text-align: center;
+}
+.content .signIn .reg_success p:first-of-type{
+	height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    color: #a32b3f;
+}
+.content .signIn .reg_success p{
+	text-align: center;
+    color: #414042;
+}
+.content .signIn .reg_success a{
+	width: 220px;
+	height: 37px;
+    line-height: 37px;
+    display: block;
+    margin: 30px auto;
+    border-left: 1px outset #58595b;
+    border-right: 1px outset #58595b;
+    background: #414042;
+    border: none;
+    border-bottom: 2px outset #231F20;
+    border-top: 1px outset #BCBEC0;
+    color: #e0d6c6;
+    font-size: 14px;
+}
+.content .signIn .code{
+	position: absolute;
+    top: 50px;
+    right: 90px;
+    width: 190px;
+    padding: 25px 45px;
+    border: 1px solid #d1d3d4;
+}
+.content .signIn .code p{
+	color: #414042;
+    text-align: center;
+}
+.content .signIn .used_pro{
+    margin: 0 22px;
+    padding: 16px 0;
+    border-top: 1px solid #d1d3d4;
+    overflow: hidden;
+}
+.content .signIn .used_pro li{
+	float: left;
+    width: 378px;
+    border-left: 1px solid #d1d3d4;
+}
+.content .signIn .used_pro li span{
+	display: inline-block;
+    float: left;
+    width: 46px;
+    height: 46px;
+    margin: 0 0 0 70px;
+    background: url(../img/bg.png) no-repeat;
+}  
+.content .signIn .used_pro li:nth-of-type(1){
+	border: none;
+}
+.content .signIn .used_pro li:nth-of-type(1) span{
+	background-position: -480px -80px;
+}
+.content .signIn .used_pro li:nth-of-type(2) span{
+	background-position: -160px -160px;
+}
+.content .signIn .used_pro li:nth-of-type(3) span{
+	background-position: -200px -80px;
+}
+.content .signIn .used_pro .count_status{
+	margin: 0 0 0 136px;
+}
+.content .signIn .used_pro .count_status a{
+	color: #414042;
+}
+.content .signIn .used_pro .count_status a h5{
+	position: relative;
+    padding: 0 0 8px;
+    text-align: left;
+    color: #414042;
+    font-weight: 400;
+}
+.content .signIn .used_pro .count_status a p{
+	color: #707070;
+}
+.content .picmenu{
+	margin-bottom: 60px;
+    width: 1180px;
+    overflow: hidden;
+    padding: 40px 0 0;
+}
+.content .picmenu ul{
+	position: relative;
+    left: -4px;
+    width: 1188px;
+}
+.content .picmenu ul li{
+    float: left;
+    width: 388px;
+    margin: 0 4px;
+}

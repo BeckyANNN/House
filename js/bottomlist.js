@@ -1,4 +1,4 @@
-window.onload = function(){
+timer = setTimeout(function(){
 	//家具
 	var bottomBox = document.querySelectorAll(".bottomlist_box");
 	var url = "http://localhost/jiaju/json/jiaju.json";
@@ -394,12 +394,38 @@ window.onload = function(){
 		}
 		cartNum.innerHTML = count;
 
+
 		//欢迎
 		var string = getCookie("user");
 		if(string==undefined){
 			oHello.innerHTML = "您好，欢迎来到HOME!";
 		}else{
 			oHello.innerHTML = "您好,"+string;
+			//登陆后操作
+			var caozuo = document.querySelector(".caozuo");
+			var person = document.querySelector(".person");
+			caozuo.style.display = "none";
+			person.style.display = "block";
+
 		}
+		//加入购物车
+		var cartEmpty = document.querySelector(".cartEmpty");
+		var cartShow = document.querySelector(".cartShow");
+		var pcount = document.querySelector(".pcount");
+		var ptotal = document.querySelector(".ptotal");
+		var obj = getCookie("init");
+		if(obj==undefined){
+			cartEmpty.style.display = "block";
+			cartShow.style.display = "none";
+		}else{
+			cartEmpty.style.display = "none";
+			cartShow.style.display = "block";
+			pcount.innerHTML = count;
+			ptotal.innerHTML = getCookie("total");
+		}
+
 	});	
-}
+	
+	
+	
+},200);

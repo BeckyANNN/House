@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/footer.css">
+	<link rel="stylesheet" href="../css/welcome.css">
+</head>
+<body>
+	<div class="header"></div>
+	<div class="content">
+		<div class="signIn">
+			<div class="reg_success">
+				<p>恭喜您注册成功！</p>
+				<p>尊敬的用户您好，您的账号为：<span class="count"></span></p>
+				<p>您的Harbor House购物之旅即将开始></p>
+				<a href="/jiaju/index.html">前去购物</a>
+			</div>
+			<div class="code">
+				<img src="../img/quick_mark.jpg" alt="">
+				<p>关注官方微信</p>
+			</div>
+			<ul class="used_pro">
+				<li>
+					<span></span>
+					<div class="count_status">
+						<a href="#">
+							<h5>完善个人资料 ></h5>
+							<p>完善您的个人信息获积分奖励</p>
+						</a>
+					</div>
+				</li>
+				<li>
+					<span></span>
+					<div class="count_status">
+						<a href="#">
+							<h5>提示账户安全 ></h5>
+							<p>与账户绑定您的手机和邮箱</p>
+						</a>
+					</div>
+				</li>
+				<li>
+					<span></span>
+					<div class="count_status">
+						<a href="#">
+							<h5>绑定门店会员卡 ></h5>
+							<p>享受门店和在线多重服务</p>
+						</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="picmenu">
+			<ul>
+				<li><a href=""><img src="../img/150319_13.jpg" alt=""></a></li>
+				<li><a href=""><img src="../img/150319_14.jpg" alt=""></a></li>
+				<li><a href=""><img src="../img/150417_23.jpg" alt=""></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer"></div>
+</body>
+</html>
+<script src="../js/jquery-1.11.3.js"></script>
+<script>
+	$(function(){
+		var p1= new Promise(function(resolve){
+			$(".header").load("../html/header.html");
+			$(".footer").load("../html/footer.html");
+			resolve();
+		});
+		p1.then(function(){			
+		
+		})
+	})
+</script>
+<script src="../js/ajax.js"></script>
+<script src="../js/cookie.js"></script>
+<script src="../js/bottomlist.js"></script>
+<script src="../js/welcome.js"></script>
