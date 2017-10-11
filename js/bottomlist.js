@@ -421,10 +421,42 @@ timer = setTimeout(function(){
 			cartEmpty.style.display = "none";
 			cartShow.style.display = "block";
 			pcount.innerHTML = count;
-			ptotal.innerHTML = getCookie("total");
+			var sumPrice = 0;
+			if(getCookie("total")){
+				var total = JSON.parse(getCookie("total"));
+			}else{
+				var total = 0;
+			}
+			for(var key in total){
+				sumPrice += total[key];
+			}
+			ptotal.innerHTML = sumPrice;
+		}
+		//我的订单
+		var order = document.querySelector(".order");
+		order.innerHTML = count;
+
+
+		//退出登录
+		var exit = document.querySelector(".exit");
+		exit.onclick = function(){
+			delCookie("user");
+			location = "/jiaju/index.html";
 		}
 
+		//回到顶部
+		var oTop = document.querySelector(".top");
+		window.onscroll = function(){
+			scroll = document.body.scrollTop||document.documentElement.scrollTop;
+			if(scroll<800){
+				oTop.style.display="none";
+			}else{
+				oTop.style.display="block";
+			}
+		}
+		
 	});	
+	
 	
 	
 	

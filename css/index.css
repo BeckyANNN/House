@@ -91,9 +91,10 @@ body,html{
 	overflow: hidden;
 }
 .content .con01,.con02{
-	width: 1180px;
+	width: 93%;
 	margin: 0 auto;
 	overflow: hidden;
+	position: relative;
 	position: relative;
 }
 
@@ -101,17 +102,14 @@ body,html{
 	float: left;
 	margin: 0 8px;
 }
-.content .con02 a:last-of-type img{
-	position: relative;
-	top: -330px;
-}
 
 .content .con02>div a{
 	display: block;
 }
 .content .con02 div a:last-of-type img{
-	position: relative;
-	top: 20px;
+	position: absolute;
+	top: 351px;
+	left: 392px;
 }
 .content .con03 div a:last-of-type img{
 	position: relative;
@@ -123,7 +121,7 @@ body,html{
 	top: -176px;
 }
 .content .img{
-	width: 1180px;
+	width: 93%;
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-around;

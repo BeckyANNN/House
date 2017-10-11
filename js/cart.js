@@ -27,7 +27,8 @@ if(getCookie("init")==undefined){
 //加载购物数据
 ajax("get","../json/serenity.json",function(cart_data){
 	var cart_data = JSON.parse(cart_data);
-	for(var i=0; i < cart_data.length; i++){
+	var length = cart_data.length
+	for(var i=0; i < length; i++){
 		for(var key in obj){
 			if(cart_data[i].id==key){
 					str+=`<ul>
@@ -89,6 +90,8 @@ ajax("get","../json/serenity.json",function(cart_data){
 				oTotal[i].innerHTML = "￥ 0.00";
 			}
 		}
+
+
 	}
 	//反选
 	function check(){
@@ -113,6 +116,8 @@ ajax("get","../json/serenity.json",function(cart_data){
 			stop = false;
 			checkAll.checked = false;
 		}
+
+
 	}
 	//商品数量
 	function proNum(){
@@ -128,10 +133,31 @@ ajax("get","../json/serenity.json",function(cart_data){
 		}
 		oNum1.innerHTML = sum2;
 	}
+
+	//弹出框总金额
+	function alertPrice(obj,numId){
+		var price = 0;
+		var arr = [];
+		if(getCookie("total")){
+			var total = JSON.parse(getCookie("total"));
+		}else{
+			var total = {};
+		}
+		for(var i=0;i<length;i++){
+			for(var key in obj){
+				if(key==numId&&cart_data[i].id==numId){
+					arr.push(cart_data[i].nowPrice.split("￥")[1]);
+					price = Number(arr[0]*obj[key]);
+					total[numId] = price;
+					setCookie("total",JSON.stringify(total),7);
+				}
+			}
+		}
+	}
 	//商品金额
 	function totalPrice(){
 		var all = 0;
-		for(var i=0;i<cart_data.length; i++){
+		for(var i=0;i<length; i++){
 			for(var key in obj){
 				if(cart_data[i].id==key){
 					price = cart_data[i].nowPrice.split("￥");
@@ -155,6 +181,8 @@ ajax("get","../json/serenity.json",function(cart_data){
 				oTotal[n].innerHTML = "￥"+all;
 			}
 		}
+
+
 	}
 
 	for(var i=0; i<checkbox.length; i++){
@@ -162,6 +190,8 @@ ajax("get","../json/serenity.json",function(cart_data){
 			check();//反选
 			proNum();//商品数量
 			totalPrice();//商品总价
+
+
 		}
 	}
 
@@ -202,6 +232,8 @@ ajax("get","../json/serenity.json",function(cart_data){
 			totalPrice();
 			//反选
 			check();	
+			//弹出信息框
+			alertPrice(obj,dataId);
 		
 			
 		}
@@ -228,6 +260,8 @@ ajax("get","../json/serenity.json",function(cart_data){
 			check();	
 			//商品金额
 			totalPrice();
+			//弹出信息框
+			alertPrice(obj,dataId);
 		}
 
 
@@ -248,4 +282,12 @@ ajax("get","../json/serenity.json",function(cart_data){
 		}
 	}
 	
+
+	//下一步
+	var next = document.querySelector(".next");
+	next.onclick = function(){
+		if(!getCookie("user")){
+			location = "/jiaju/html/login.html";
+		}
+	}
 })

@@ -31,7 +31,7 @@ html,body{
 	height: 30px;
 }
 .header .list .header-main{
-	width: 1180px;
+	width: 93%;
 	height: 30px;
 	margin: 0 auto;
 	display: flex;
@@ -106,7 +106,7 @@ html,body{
 	border: 1px solid #d1d3d4;
 	line-height: 21px;
 	display: none;
-	width: 80px;
+	width: 90px;
 }
 .header .list .header-main .person ul li{
 	margin-left: 0;
@@ -123,7 +123,7 @@ html,body{
 	font-size: 12px;
 }
 .header .box{
-	width: 767px;
+	width: 737px;
 	background: white;
 	box-sizing: border-box;
 	position: absolute;
@@ -132,7 +132,7 @@ html,body{
 	display: none;
 }
 .header .left{	
-	width: 503px;
+	width: 473px;
 	overflow: hidden;
 	float: left;
 	box-sizing: border-box;
@@ -248,7 +248,7 @@ html,body{
 	height: 35px;
 }
 .header .bottomlist .list-main{
-	width: 1180px;
+	width: 93%;
 	height: 35px;
 	margin: 0 auto;
 }
@@ -267,14 +267,15 @@ html,body{
 	outline: 0;
 	text-indent: 2em;
 }
-.header .bottomlist .list-main>ul li:last-of-type button{
+.header .bottomlist .list-main>ul li:last-of-type{
 	position: relative;
-    top: 6px;
-    right: -155px;
-    z-index: 14;
+}
+.header .bottomlist .list-main>ul li:last-of-type button{
+	position: absolute;
+    top: 7px;
+    right: 5px;
     width: 20px;
     height: 20px;
-
     border: 0;
     outline: 0;
 	border-radius: 50%;

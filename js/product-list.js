@@ -4,7 +4,6 @@
 	var oUl = document.querySelectorAll(".list>ul");
 	var oBtn = document.querySelector(".button");
 	var oPrev = document.querySelector(".prev");
-	console.log(oPrev);
 	var oNext = document.querySelector(".next");
 	var obj = {};
 	var now = 1;

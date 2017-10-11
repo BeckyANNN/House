@@ -106,7 +106,6 @@ window.onload = function(){
 		}
 		//异步post请求
 		$.post("/jiaju/php/register.php",userInfo,function(data){
-			console.log(data)
 			if(data.status==1){
 				location = "welcome.html";
 				setCookie("user",userInfo.username,7);

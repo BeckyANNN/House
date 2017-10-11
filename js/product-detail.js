@@ -238,11 +238,11 @@ setTimeout(function(){
 			cartNum.innerHTML = count;
 
 			//弹出信息框
-			alertInfo(obj,count);
+			alertInfo(obj,arr[1],obj[arr[1]]);
 			
 		}
 		//弹出信息框
-		function alertInfo(obj,count){
+		function alertInfo(obj,numId,count){
 				$.get("/jiaju/json/serenity.json",obj,function(data){
 					length = data.length;
 					if(obj==undefined){
@@ -250,25 +250,35 @@ setTimeout(function(){
 						$(".cartShow").hide();
 						$(".cartEmpty").show();
 					}else{
+						if(getCookie("total")){
+							var total = JSON.parse(getCookie("total")); 
+						}else{
+							var total = {};
+						}
 						var sum = 0;
+						var num = 0;
+						var sum1 = 0;
 						for(var i=0; i<length; i++){
-							for(var key in obj){
-								if(data[i].id==key){
-									var aPrice = "";
-									aPrice = data[i].nowPrice.split("￥")[1];
-									sum+=count*Number(aPrice);
-								}
-								
+							if(data[i].id==numId){
+								var aPrice = "";
+								aPrice = data[i].nowPrice.split("￥")[1];//获取指定商品的单价
+								sum+=count*Number(aPrice);//指定商品的总价
+								total[numId] = sum;
 							}
 							
 						}
-						console.log(sum)
 						$(".cart_top").delay(1000).fadeIn(400).delay(5000).fadeOut(400);
 						$(".cartShow").show();
 						$(".cartEmpty").hide();
-						$(".pcount").text(count);
-						$(".ptotal").text(sum);
-						setCookie("total",sum,7);
+						for(var key in obj){
+							num += obj[key];
+						}
+						$(".pcount").text(num);
+						for(var key in total){
+							sum1 += total[key];
+						}
+						$(".ptotal").text(sum1);
+						setCookie("total",JSON.stringify(total),7);
 					}
 					
 				})
@@ -303,7 +313,8 @@ setTimeout(function(){
 					count+=Number(obj[key]);
 				}
 				cartNum.innerHTML = count;
-				alertInfo(obj,count);
+				//弹出信息框
+				alertInfo(obj,numId,obj[numId]);
 			}
 
 		}
