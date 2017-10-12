@@ -27,9 +27,7 @@ html,body{
 
 .header .list{
 	width: 100%;
-	overflow: hidden;
 	position: relative
-
 }
 .header .list .header-main{
 	width: 100%;
@@ -110,6 +108,7 @@ html,body{
 	line-height: 21px;
 	display: none;
 	width: 90px;
+	background: white;
 }
 .header .list .header-main .person ul li{
 	margin-left: 0;
@@ -139,6 +138,7 @@ html,body{
 	overflow: hidden;
 	float: left;
 	box-sizing: border-box;
+	line-height: 24px;
 }
 .header .left ul{
 	padding: 40px 0 40px 59px;
@@ -296,7 +296,7 @@ html,body{
 	color: black;
 }
 .header .bottomlist .list-main>ul>li:hover .bottomlist_box{
-	z-index: 2;
+	z-index: 999;
 	display: block;
 }
 /* bottomlist二级菜单 */
@@ -307,9 +307,6 @@ html,body{
 	border: 1px solid #d1d3d4;
 	height: 450px;
 	display: none;
-
-
-
 }
 
 .header .bottomlist .bottomlist_box:first-of-type .bottomlist_left{	

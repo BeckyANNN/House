@@ -218,7 +218,6 @@ setTimeout(function(){
 		}else{
 			sumNow = sumNow;
 		}
-		console.log(sumNow);
 		addCart.onclick = function(){
 			var numId = arr[1];	
 			if(getCookie("init")==undefined){

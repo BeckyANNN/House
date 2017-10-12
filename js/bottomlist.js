@@ -396,18 +396,20 @@ timer = setTimeout(function(){
 
 
 		//欢迎
-		var string = getCookie("user");
-		if(string==undefined){
-			oHello.innerHTML = "您好，欢迎来到HOME!";
-		}else{
-			oHello.innerHTML = "您好,"+string;
-			//登陆后操作
-			var caozuo = document.querySelector(".caozuo");
-			var person = document.querySelector(".person");
-			caozuo.style.display = "none";
-			person.style.display = "block";
+		setTimeout(function(){
+			var string = getCookie("user");
+			if(string==undefined){
+				oHello.innerHTML = "您好，欢迎来到HOME!";
+			}else{
+				oHello.innerHTML = "您好,"+string;
+				//登陆后操作
+				var caozuo = document.querySelector(".caozuo");
+				var person = document.querySelector(".person");
+				caozuo.style.display = "none";
+				person.style.display = "block";
 
-		}
+			}
+		},50)
 		//加入购物车
 		var cartEmpty = document.querySelector(".cartEmpty");
 		var cartShow = document.querySelector(".cartShow");
