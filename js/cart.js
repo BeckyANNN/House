@@ -1,13 +1,19 @@
-
+setTimeout(function(){
 var checkAll = document.querySelector(".checkAll");
 var oNum1 = document.querySelector(".num1");
 var oTotal = document.querySelectorAll(".total");
 var summary = document.querySelector(".summary");
 var show = document.querySelector(".show");
+
 var all = 0;
 var arr=[];
 var sum2 = 0;
 str="";
+if(getCookie("total")){
+	var total = JSON.parse(getCookie("total"));
+}else{
+	var total = {};
+}
 var item = document.querySelector(".item");
 if(getCookie("init")==undefined){
 	var obj = {};
@@ -270,18 +276,25 @@ ajax("get","../json/serenity.json",function(cart_data){
 			for(var key in obj){
 				if(target.parentNode.previousElementSibling.children[0].getAttribute("data-id") == key){
 					delete obj[key];	
+					delete total[key];
 					setCookie("init",JSON.stringify(obj),7);
+					setCookie("total",JSON.stringify(total),7);
+					
 				}
-				if(obj[key]==undefined){
-					delCookie("init");
-					setCookie("total",0,1);
+
+				
+				if(dec.length==1){
+					setCookie("init",obj,-1);
+					setCookie("total",total,-1);
+					location.reload();
 				}
+				
 			}
 			target.parentNode.parentNode.remove();
 
 		}
 	}
-	
+
 
 	//下一步
 	var next = document.querySelector(".next");
@@ -291,3 +304,4 @@ ajax("get","../json/serenity.json",function(cart_data){
 		}
 	}
 })
+},50);
