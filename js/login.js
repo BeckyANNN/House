@@ -14,7 +14,7 @@ setTimeout(function(){
 	$.post("/jiaju/php/login.php",userInfo,function(data){
 		if(data.status==0){
 			location = "/jiaju/index.html";
-			if(check.checked){
+			if(check.checked==true){
 				setCookie("user",user.value,7);
 			}else{
 				setCookie("user",user.value,1);

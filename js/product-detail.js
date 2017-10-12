@@ -189,8 +189,8 @@ setTimeout(function(){
 		var oInc = document.querySelectorAll(".inc");
 		var oNumNow = document.querySelector(".num_now");
 		var oNum = document.querySelectorAll(".num");
+		var sumNow = 0;
 		for(var i=0; i<oInc.length; i++){
-			
 			oDec[i].index = i;
 			oInc[i].index = i;
 			oDec[i].onclick = function(){
@@ -201,17 +201,24 @@ setTimeout(function(){
 					val--;
 				}
 				oNum[this.index].value = val;
+				sumNow = Number(oNum[0].value);
+				
 			};
 			oInc[i].onclick = function(){
 				var val = Number(oNum[this.index].value);
 				val++;
 				oNum[this.index].value= val;
-				
+				sumNow = Number(oNum[0].value);
 			};
 		}
 		//加入购物车
 		var addCart = document.querySelector(".addCart");
-		var sumNow = Number(oNumNow.value);
+		if(sumNow==0){
+			sumNow = Number(oNumNow.value);
+		}else{
+			sumNow = sumNow;
+		}
+		console.log(sumNow);
 		addCart.onclick = function(){
 			var numId = arr[1];	
 			if(getCookie("init")==undefined){
